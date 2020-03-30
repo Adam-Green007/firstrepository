@@ -39,6 +39,16 @@ $winterProduct =[
         'urlpics'=>'img/lot-6.jpg'
     ]
 ];
+function formatSum($a)
+{
+    ceil($a);
+    if ($a < 1000) {
+    } else {
+        $a = number_format($a, 0, ',', ' ');
+    }
+
+    return ($a);
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -128,7 +138,7 @@ $winterProduct =[
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= $value['price'];?>><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= formatSum( $value['price']),' ';?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
 
