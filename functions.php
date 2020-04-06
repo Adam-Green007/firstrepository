@@ -1,6 +1,5 @@
 <?php
 
-
 function include_template($path, array $data = [])
 {
     $path = 'templates/' . $path;
